@@ -1,0 +1,54 @@
+$family-sans-serif: "Poppins", sans-serif;
+$family-monospace: "Fira Code", monospace;
+
+@import '~bulma/sass/utilities/_all';
+@import 'variables';
+@import 'vendor/bulma';
+@import 'vendor/buefy';
+
+body,
+html {
+    height: 100vh;
+}
+
+.logo {
+    fill: $link;
+
+    &.muted {
+        fill: $grey-light;
+    }
+}
+
+.navbar-menu {
+    .navbar-start {
+        & > .navbar-item {
+            border-bottom: 0.175rem solid $white;
+            color: $navbar-item-color;
+        }
+
+        & > .navbar-item:hover {
+            border-color: $light;
+            color: $navbar-item-active-color;
+        }
+
+        & > .navbar-item.is-active:not(.requires-exact-active),
+        & > .navbar-item.is-exact-active {
+            border-color: $link;
+            color: $navbar-item-active-color;
+        }
+    }
+
+    .avatar-image {
+        border-radius: 50%;
+    }
+}
+
+.breadcrumb li:last-child a {
+    padding-right: 0;
+}
+
+@media screen and (min-width: $tablet) {
+    .page-title-right {
+        justify-content: end !important;
+    }
+}
